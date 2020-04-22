@@ -1,0 +1,62 @@
+{
+  "name": "mithril-boilerplate",
+  "version": "0.0.0",
+  "description": "Mithril boilerplate is built using Babel 7, Construct-ui, ES6, ESLint, Sass/SCSS and webpack 4 + HMR.",
+  "author": "Alexandre Ferland",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admiralobvious/mithril-boilerplate.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
+    "build:production": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
+    "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
+    "lint": "eslint src/ config/webpack/ babel.config.js webpack.config.js --cache --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.2",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-mithril": "^0.1.1",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-normalize": "^9.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^8.0.2",
+    "terser-webpack-plugin": "^2.3.5",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.7.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
+    "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "construct-ui": "^0.2.4",
+    "mithril": "^2.0.4",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
