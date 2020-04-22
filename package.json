@@ -16,6 +16,9 @@
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "lint": "eslint src/ config/webpack/ babel.config.js webpack.config.js --cache --fix"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -40,6 +43,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-normalize": "^9.0.0",
     "postcss-preset-env": "^6.7.0",
+    "pre-commit": "^1.2.2",
     "sass-loader": "^8.0.2",
     "terser-webpack-plugin": "^2.3.5",
     "url-loader": "^4.1.0",
