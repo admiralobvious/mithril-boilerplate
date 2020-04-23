@@ -1,4 +1,4 @@
-import { Button, Card, Toaster, Tooltip } from 'construct-ui'
+import { Button, Card, Icon, Icons, Toaster, Tooltip } from 'construct-ui'
 
 import Clicks from '../../models/Clicks'
 import './styles.scss'
@@ -18,12 +18,23 @@ export default function() {
         m(Tooltip, {
           content: 'Click me!',
           trigger: m(Button, {
-            label: 'click',
+            label: m(Icon, {
+              name: Icons.PLUS,
+            }),
             intent: 'primary',
             onclick() {
               Clicks.count++
             },
           }),
+        }),
+        m(Button, {
+          label: m(Icon, {
+            name: Icons.MINUS,
+          }),
+          intent: 'primary',
+          onclick() {
+            Clicks.count--
+          },
         }),
         m(Button, {
           label: 'reset',

@@ -6,11 +6,13 @@ import './styles.scss'
 export default function() {
   return {
     view() {
-      return m('div', [
+      return m('.content', [
         m(Grid, {
-          align: 'middle',
+          justify: 'center',
         },
-        m('h2', 'Mithril Boilerplate'),
+        m('.header',
+          m('h1', 'Mithril Boilerplate'),
+        ),
         ),
         m(Grid, {
           class: 'counter',
