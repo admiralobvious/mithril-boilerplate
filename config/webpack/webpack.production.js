@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 const paths = require('./paths')
 
@@ -20,6 +21,10 @@ module.exports = {
     new Dotenv({
       path: paths.envProdPath, // Path to .env.production file 
       expand: true,
+    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
     }),
     new Dotenv({
       path: paths.envPath, // Path to .env file 
