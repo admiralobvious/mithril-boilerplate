@@ -4,8 +4,6 @@
 
 Mithril boilerplate is built using Babel 7, [Construct-ui](https://vrimar.github.io/construct-ui/#/introduction/getting-started), ES6, ESLint, Sass/SCSS and webpack 4 + HMR.
 
-If you are looking for a boilerplate without a UI library check out [mithril-simple-app](https://github.com/alexferl/mithril-simple-app).
-
 ### Using
 
 Initialize:
