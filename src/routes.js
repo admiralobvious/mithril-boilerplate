@@ -1,12 +1,12 @@
 import m from 'mithril'
 
 import Layout from './views/Layout'
-import Sample from './components/Counter'
+import Counter from './components/Counter'
 
 const Routes = {
   '/': {
     render() {
-      return m(Layout, m(Sample))
+      return m(Layout, m(Counter))
     },
   },
 }
