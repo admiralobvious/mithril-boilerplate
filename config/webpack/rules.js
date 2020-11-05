@@ -30,8 +30,7 @@ module.exports = [
       {
         loader: 'postcss-loader',
         options: {
-          ident: 'postcss',
-          plugins: () => [
+          postcssOptions: { plugins: () => [
             require('postcss-flexbugs-fixes'),
             require('postcss-preset-env')({
               autoprefixer: {
@@ -41,6 +40,8 @@ module.exports = [
             }),
             postcssNormalize(),
           ],
+          parser: 'postcss',
+          },
         },
       },
       {
